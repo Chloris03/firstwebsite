@@ -6,7 +6,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>{{ message }}</h1>
-    <p>這是根目錄的頁面。</p>
+    <header>
+        <h1>{{ heading }}</h1>
+    </header>
+
+    <main>
+        <section class="card">
+            <p>{{ content }}</p>
+            <p>這裡可以放更多介紹，例如作品集、關於你的描述，或者最新消息。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 簡約網站設計</p>
+    </footer>
 </body>
 </html>
+

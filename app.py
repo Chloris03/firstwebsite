@@ -1,11 +1,15 @@
-from flask import Flask,render_template
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__)  # 如果你用的是 statics 資料夾，見下方第 3 點的設定
 
-# 只設定根目錄 "/"
 @app.route("/")
 def home():
-    return render_template("index.html", title="首頁", message="Hello Flask!")
+    return render_template(
+        "index.html",
+        title="簡約灰色系網站",
+        heading="歡迎來到我的網站",
+        content="這是一個簡約但有內容的灰色系設計。"
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
