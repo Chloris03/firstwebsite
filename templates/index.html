@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <title>會員系統</title>
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <header>
-        <h1>{{ heading }}</h1>
-    </header>
+  <header>
+    <h1>會員系統</h1>
+  </header>
 
-    <main>
-        <section class="card">
-            <p>{{ content }}</p>
-            <p>這裡可以放更多介紹，例如作品集、關於你的描述，或者最新消息。</p>
-        </section>
-    </main>
+  <main>
+    <!-- 註冊區塊 -->
+    <section class="card">
+      <h2>註冊</h2>
+      <form id="register-form">
+        <input type="text" id="reg-username" placeholder="使用者名稱" required>
+        <input type="password" id="reg-password" placeholder="密碼（至少 6 碼）" required>
+        <button type="submit">註冊</button>
+      </form>
+      <p id="register-msg" class="msg"></p>
+    </section>
 
-    <footer>
-        <p>© 2025 簡約網站設計</p>
-    </footer>
+    <!-- 登入區塊 -->
+    <section class="card">
+      <h2>登入</h2>
+      <form id="login-form">
+        <input type="text" id="login-username" placeholder="使用者名稱" required>
+        <input type="password" id="login-password" placeholder="密碼" required>
+        <button type="submit">登入</button>
+      </form>
+      <p id="login-msg" class="msg"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 簡約網站設計</p>
+  </footer>
+
+  <!-- 在 body 末端引入 JS -->
+  <script src="/static/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
 
